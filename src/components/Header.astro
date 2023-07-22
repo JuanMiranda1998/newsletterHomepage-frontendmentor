@@ -1,0 +1,75 @@
+<header class="navbar">
+    <div class="navbar_logo">
+      <img src="/assets/images/logo.svg" alt="Web logo">
+    </div>
+    <div class="navbar_menu">
+      <button class="navbar_menu-button" id="openMenuButton"><img src="/assets/images/icon-menu.svg"></button>
+      <ul class='menu-links' id="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Popular</a></li>
+        <li><a href="#">Trending</a></li>
+        <li><a href="#">Categories</a></li>
+      </ul>
+      <button class="navbar_close-menu-button" id="closeMenuButton"><img src="/assets/images/icon-menu-close.svg"></button>
+    </div>
+</header>
+<style>
+  .navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto 1rem;
+    padding: 1rem 0;
+    z-index: 1;
+  }
+  .navbar_logo{
+    width: 50px;
+    cursor: pointer;
+  }
+  .navbar_menu{
+    position: relative;
+  }
+  .navbar_menu-button{
+    display: block;
+  }
+  .navbar_close-menu-button{
+    display: none;
+    z-index: -1;
+  }
+  .menu-links{
+    width: 50%;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: -2;
+    background-color: #fff;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0 0 3rem 1rem;
+    color: var(--clr-neutral-very-dark-blue);
+  }
+  @media (min-width:768px){
+  .navbar_menu-button{
+    display: none;
+  }
+  .menu-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 2rem 0;
+    position: initial;
+    height: auto;
+    color: var(--clr-neutral-dark-grayish-blue);
+  }
+  .menu-links li a:hover{
+    cursor: pointer;
+    color: var(--clr-primary-soft-red);
+  }
+  }
+</style>

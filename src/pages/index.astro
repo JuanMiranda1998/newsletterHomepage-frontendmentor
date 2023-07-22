@@ -1,0 +1,41 @@
+---
+	import Header from '.././components/Header.astro';
+	import Article from '.././components/Article.astro';
+	import Nav from '.././components/Nav.astro';
+	import PopularNews from '.././components/PopularNews.astro';
+	import '../../styles/styles-global.css';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/assets/images/favicon-32x32.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Newsletter Homepage</title>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<Article />
+			<Nav />
+		</main>
+		<PopularNews />
+	</body>
+	<script>
+		const openMenuBtn = document.getElementById('openMenuButton');
+		const closeMenuBtn = document.getElementById('closeMenuButton');
+		const menu = document.getElementById('menu');
+
+		openMenuBtn.addEventListener('click',e=>{
+			openMenuBtn.style = 'display: none;'
+			closeMenuBtn.style = 'display: block;'
+			menu.style = 'display: flex;'	
+		});
+		closeMenuBtn.addEventListener('click',e=>{
+			closeMenuBtn.style = 'display: none;'
+			openMenuBtn.style = 'display: block;'
+			menu.style = 'display: none;'	
+		});
+	</script>
+</html>

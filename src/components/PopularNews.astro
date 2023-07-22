@@ -1,0 +1,74 @@
+<div class="popularNews">
+    <section class="newsCard">
+      <img class="newsCard_image" src="assets/images/image-retro-pcs.jpg" alt="retro PCs image">
+      <div class="newsCard_text">
+        <span class="newsCard_number">01</span>
+        <h2 class="newsCard_title"><a href="#">Reviving Retro PCs</a></h2>
+        <p class="newsCard_intro">What happens when old PCs are given modern upgrades?</p>
+      </div>
+    </section>
+    <section class="newsCard">
+      <img class="newsCard_image" src="assets/images/image-top-laptops.jpg" alt="laptops image">
+      <div class="newsCard_text">
+        <span class="newsCard_number">02</span>
+        <h2 class="newsCard_title"><a href="#">Top 10 Laptops of 2022</a></h2>
+        <p class="newsCard_intro">Our best picks for various needs and budgets.</p>
+      </div>
+    </section>
+    <section class="newsCard">
+      <img class="newsCard_image" src="assets/images/image-gaming-growth.jpg" alt="gaming image">
+      <div class="newsCard_text">
+        <span class="newsCard_number">03</span>
+        <h2 class="newsCard_title"><a href="#">The Growth of Gaming</a></h2>
+        <p class="newsCard_intro">How the pandemic has sparked fresh opportunities.</p>
+      </div>
+    </section>
+  </div>
+  <style>
+    .popularNews{
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin: 2rem;
+    }
+    .newsCard{
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      height: 120px;
+    }
+    .newsCard_text{
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+    .newsCard_intro{
+      line-height: 1.5;
+      font-size: .925rem;
+      padding-right: 1rem;
+      color: var(--clr-neutral-dark-grayish-blue);
+    }
+    .newsCard_number{
+      font-size: 2rem;
+      font-weight: var(--fw-bold);
+      color: var(--clr-neutral-grayish-blue);
+    }
+    .newsCard_title{
+      font-size: 1.125rem;
+      font-weight: var(--fw-extrabold);
+      color: var(--clr-neutral-very-dark-blue);
+    }
+    .newsCard_title:hover{
+      cursor: pointer;
+      color: var(--clr-primary-soft-red);
+    }
+    .newsCard_image{
+      width: 6rem;
+      height: 100%;
+    }
+    @media (min-width:768px) {
+      .popularNews{
+        flex-direction: row;
+      }
+    }
+  </style>

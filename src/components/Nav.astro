@@ -1,0 +1,52 @@
+<nav class="nav">
+    <h2 class="nav_title">New</h2>
+    <section class="nav_element">
+      <h2 class="nav_element-title"><a href="#">Hydrogen VS Electric Cars</a></h2>
+      <p class="nav_element-intro">Will hydrogen-fueled cars ever catch up to EVs?</p>
+    </section>
+    <section class="nav_element">
+      <h2 class="nav_element-title"><a href="#">The Downsides of AI Artistry</a></h2>
+      <p class="nav_element-intro">What are the possible adverse effects of on-demand AI image generation?</p>
+    </section>
+    <section class="nav_element">
+      <h2 class="nav_element-title"><a href="#">Is VC Funding Drying Up?</a></h2>
+      <p class="nav_element-intro">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+    </section>
+  </nav>
+  <style>
+    .nav{
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 1.5rem 1.25rem;
+      background-color: var(--clr-neutral-very-dark-blue);
+      color: var(--clr-neutral-off-white);
+    }
+    .nav_title{
+      font-size: 2.5rem;
+      color: var(--clr-primary-soft-orange);
+    }
+    .nav_element{
+      position: relative;
+      padding: 0 0 2rem;
+    }
+    .nav_element:not(:last-child)::after{
+      content: '';
+      width: 100%;
+      height: 1px;
+      top: 100%;
+      left: 0;
+      background-color: var(--clr-neutral-dark-grayish-blue);
+      position: absolute;
+    }
+    .nav_element-title{
+      font-size: 1.25rem;
+    }
+    .nav_element-intro{
+      margin-top: .875rem;
+      line-height: 1.7;
+      font-size: .975rem;
+      font-weight: var(--fw-regular);
+      color: var(--clr-neutral-grayish-blue);
+    }
+  </style>
